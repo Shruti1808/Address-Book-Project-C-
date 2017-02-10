@@ -1,4 +1,4 @@
-namespace AddressBook
+namespace AddressBook.Objects
 {
   public class Contact
   {
