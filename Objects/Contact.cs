@@ -6,7 +6,7 @@ namespace AddressBook.Objects
     private string _lastName;
     private string _phoneNumber;
     private string _address;
-     private static List<string> _Contactlist = new List<string> {};
+    private static List<Contact> _Contactlist = new List<Contact> {};
 
     public Contact (string firstName , string lastName, string phoneNumber, string address)
     {
@@ -48,16 +48,14 @@ namespace AddressBook.Objects
     {
       _address = newAddress;
     }
-    public static List<string> GetAll()
+    public static List<Contact> GetAll()
     {
       return _Contactlist;
     }
     public void Save()
     {
-      _Contactlist.Add(_firstName);
-      _Contactlist.Add(_lastName);
-      _Contactlist.Add(_phoneNumber);
-      _Contactlist.Add(_address);
+      Contact newContact = new Objects.Contact(_firstName,_lastName,_phoneNumber,_address);
+      _Contactlist.Add(newContact);
     }
 
   }
