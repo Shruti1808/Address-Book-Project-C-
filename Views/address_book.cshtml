@@ -1,24 +1,17 @@
-@{
-  Layout="Shared/_Layout.cshtml";
-}
-
-    <h1>Your Address Book!</h1>
-    <form action='/address_details'>
-      <div class='form-group'>
-        <label for='firstname'>First name</label>
-        <input id='firstname' name='firstname' class='form-control' type='text'>
-      </div>
-      <div class='form-group'>
-        <label for='lastname'>Another name</label>
-        <input id='lastname' name='lastname' class='form-control' type='text'>
-      </div>
-      <div class='form-group'>
-        <label for='phoneNumber'>Phone Number</label>
-        <input id='phoneNumber' name='phoneNumber' class='form-control' type='text'>
-      </div>
-      <div class='form-group'>
-        <label for='Address'>Address</label>
-        <input id='address' name='address' class='form-control' type='text'>
-      </div>
-      <button type='submit' class='btn btn-primary'>Show my Contact!</button>
-    </form>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Address Book</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="/Content/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Your Address Book!</h1>
+    </div>
+    <p><a href="/add_contact.cshtml">Create new Contact!</a></p>
+  </div>
+</body>
+</html>
