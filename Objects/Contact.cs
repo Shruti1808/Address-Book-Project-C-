@@ -7,16 +7,48 @@ namespace AddressBook.Objects
     private string _phoneNumber;
     private string _address;
 
-
-    public string GetRecipient()
+    public Contact (string firstName , string lastName, string phoneNumber, string address)
     {
-      return _recipient;
+      _firstName = firstName;
+      _lastName = lastName;
+      _phoneNumber = phoneNumber;
+      _address = address;
     }
 
-    public void SetRecipient(string newRecipient)
+    public string GetfirstName()
     {
-      _recipient = newRecipient;
+      return _firstName;
     }
+    public void SetfirstName(string newFirstName)
+    {
+      _firstName = newFirstName;
+    }
+    public string GetlastName()
+    {
+      return _lastName;
+    }
+
+    public void SetlastName(string newLastName)
+    {
+      _lastName = newLastName;
+    }
+    public string GetphoneNumber()
+    {
+      return _phoneNumber;
+    }
+    public void SetphoneNumber(string newphoneNumber)
+    {
+      _phoneNumber = newphoneNumber;
+    }
+    public string GetAddress()
+    {
+      return _address;
+    }
+    public void SetAddress(string newAddress)
+    {
+      _address = newAddress;
+    }
+
   }
 
 }
