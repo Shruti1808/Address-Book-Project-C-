@@ -12,6 +12,8 @@ namespace AddressBook
         List<Contact> allContacts = Contact.GetAll();
         return View["address_book.cshtml", allContacts];
       };
+      Get["/new_contact"] =_=>View["contact.cshtml"];
+
 
       Post["/contact_added"] = _ => {
         Contact newContact = new Contact (Request.Form["firstname"],Request.Form["lastname"],Request.Form["phoneNumber"],Request.Form["address"]);

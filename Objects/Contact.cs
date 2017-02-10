@@ -8,6 +8,7 @@ namespace AddressBook.Objects
     private string _lastName;
     private string _phoneNumber;
     private string _address;
+    private int _id;
     private static List<Contact> _Contactlist = new List<Contact> {};
     //  Create Contact Constructor..........>
     public Contact (string firstName , string lastName, string phoneNumber, string address)
@@ -16,6 +17,8 @@ namespace AddressBook.Objects
       _lastName = lastName;
       _phoneNumber = phoneNumber;
       _address = address;
+      _Contactlist.Add(this);
+      _id = _Contactlist.Count;               //Gives each contact an ID  to organize it
     }
     //  Getters and Setters..............................>
     public string GetFirstName()
@@ -49,6 +52,10 @@ namespace AddressBook.Objects
     public void SetAddress(string newAddress)
     {
       _address = newAddress;
+    }
+    public int GetId()
+    {
+      return _id;
     }
     //To show list of all Contacts........................>
     public static List<Contact> GetAll()
