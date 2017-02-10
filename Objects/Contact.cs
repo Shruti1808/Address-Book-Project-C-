@@ -9,7 +9,7 @@ namespace AddressBook.Objects
     private string _phoneNumber;
     private string _address;
     private static List<Contact> _Contactlist = new List<Contact> {};
-
+    //  Create Contact Constructor..........>
     public Contact (string firstName , string lastName, string phoneNumber, string address)
     {
       _firstName = firstName;
@@ -17,7 +17,7 @@ namespace AddressBook.Objects
       _phoneNumber = phoneNumber;
       _address = address;
     }
-
+    //  Getters and Setters..............................>
     public string GetFirstName()
     {
       return _firstName;
@@ -50,14 +50,21 @@ namespace AddressBook.Objects
     {
       _address = newAddress;
     }
+    //To show list of all Contacts........................>
     public static List<Contact> GetAll()
     {
       return _Contactlist;
     }
+    // using Save method ...............>
     public void Save()
     {
       Contact newContact = new Objects.Contact(_firstName,_lastName,_phoneNumber,_address);
       _Contactlist.Add(newContact);
+    }
+    // Clear all contacts from the list............>
+    public static void ClearAll()
+    {
+      _Contactlist.Clear();
     }
 
   }

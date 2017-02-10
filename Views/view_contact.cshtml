@@ -1,3 +1,11 @@
 
 <h1>Your Address Book!</h1>
-  
+@foreach(Contact contact in Model)
+{
+  <li>@contact</li>
+}
+</ul>
+<p><a href="/">Add another contact</a></p>
+<form action="/contacts_cleared" method="post">
+  <button type="submit" name="button" class= "btn btn-md btn-primary">Clear All Contacts</button>
+</form>
