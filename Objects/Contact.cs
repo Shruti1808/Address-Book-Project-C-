@@ -73,6 +73,7 @@ namespace AddressBook.Objects
     {
       _Contactlist.Clear();
     }
+    
 
   }
 
