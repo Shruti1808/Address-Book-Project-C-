@@ -2,13 +2,9 @@
 @{
   Layout="Shared/_Layout.cshtml";
 }
+    <h2>First Name: @Model.GetFirstName()</h2>
+    <h2>Last Name: @Model.GetLastName()</h2>
+    <h3>Phone number: @Model.GetPhoneNumber()</h3>
+    <h3>Address: @Model.GetAddress()</h3>
 
-@foreach(Contact contact in Model)
-{
-  <li>@contact</li>
-}
-</ul>
-<p><a href="/">Add another contact</a></p>
-<form action="/contacts_cleared" method="post">
-  <button type="submit" name="button" class= "btn btn-md btn-primary">Clear All Contacts</button>
-</form>
+   <p><a href="/">View all Contacts</a></p>

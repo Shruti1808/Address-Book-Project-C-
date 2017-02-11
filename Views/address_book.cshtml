@@ -1,6 +1,12 @@
 @{
   Layout="Shared/_Layout.cshtml";
 }
-
+<ul>
+  @foreach (var contact in Model)
+  {
+    <li><a href='/contacts/@contact.GetId()'>@contact.GetFirstName()  @contact.GetLastName()</a></li>
+  }
+</ul>
 
 <p><a href="/new_contact">Create new Contact!</a></p>
+<p><a href="/contacts_cleared">Clear all Contacts</a></p>

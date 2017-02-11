@@ -62,18 +62,15 @@ namespace AddressBook.Objects
     {
       return _Contactlist;
     }
-    // using Save method ...............>
-    public void Save()
-    {
-      Contact newContact = new Objects.Contact(_firstName,_lastName,_phoneNumber,_address);
-      _Contactlist.Add(newContact);
-    }
     // Clear all contacts from the list............>
     public static void ClearAll()
     {
       _Contactlist.Clear();
     }
-    
+    public static Contact Find(int searchId)
+        {
+          return _Contactlist[searchId-1];
+        }
 
   }
 
